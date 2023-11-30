@@ -13,6 +13,9 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Core\AutoMapperConfig\" />
+    <Folder Include="Core\Context\" />
+    <Folder Include="Core\Dtos\" />
   </ItemGroup>
 
 </Project>
