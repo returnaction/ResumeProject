@@ -23,8 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Dtos\Job\" />
-    <Folder Include="Core\Dtos\Condidate\" />
+    <Folder Include="Documents\pdfs\" />
   </ItemGroup>
 
 </Project>
