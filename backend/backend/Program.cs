@@ -1,5 +1,6 @@
 using backend.Core.AutoMapperConfig;
 using backend.Core.Context;
+using backend.Exetensions;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 // Db Configurations
+builder.Services.ConfigureCors();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("local"));
@@ -35,14 +37,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("CorsPolicy");
 
-app.UseCors(options =>
-{
-    options
-    .AllowAnyHeader()
-    .AllowAnyMethod()
-    .AllowAnyHeader();
-});
 
 app.UseHttpsRedirection();
 
