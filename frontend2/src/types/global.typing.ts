@@ -5,11 +5,23 @@ export interface ICompany{
     createdAt: string
 }
 
-// {
-//     "id": 2,
-//     "name": "Amazon",
-//     "size": "Large",
-//     "createdAt": "2023-11-30T12:48:37.7205986",
-//     "updatedAt": "2023-11-30T12:48:37.7206082",
-//     "isActive": true
-//   }
+export interface ICreateCompanyDto{
+    name: string;
+    size: string;
+}
+
+export interface IJob {
+    id: string;
+    title: string;
+    level: string;
+    companyId: string;
+    companyName: string;
+    createdAt: string;
+}
+
+export interface ICreateJobDto {
+
+    title: string;
+    level: string;
+    companyId: string;
+}
